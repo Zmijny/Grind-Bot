@@ -1,0 +1,5 @@
+Resolution:
+screen_width = 1680
+screen_height = 1050
+
+Weapon = Bawoo
