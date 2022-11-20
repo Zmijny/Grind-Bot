@@ -33,8 +33,6 @@ void LoadConfig()
 	weapon = line;
 }
 
-
-
 void AmmoBoxRefresh()
 {
 	//for some fucking reason always uses 2 ammunition boxes. To be fixed
@@ -130,9 +128,7 @@ void main()
 				std::exit(EXIT_SUCCESS);
 				return;
 			}
-
-		}		
-					
+		}					
 	}
 	system("CLS");
 	if (GetAsyncKeyState(VK_F6))
