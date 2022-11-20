@@ -8,8 +8,32 @@
 #include <string>
 
 std::string weapon;
-int null;
+int null, screen_width, screen_height;
 bool bgstatus;
+
+void LoadConfig()
+{
+	std::ifstream config;
+	config.open("config.txt");
+	std::string line;
+
+	//load width
+	for (int i = 1; i <= 4; i++)
+		config >> line;
+	screen_width = stoi(line);
+
+	//load height
+	for (int i = 1; i <= 3; i++)
+		config >> line;
+	screen_height = stoi(line);
+
+	//load weapon type
+	for (int i = 1; i <= 3; i++)
+		config >> line;
+	weapon = line;
+}
+
+
 
 void AmmoBoxRefresh()
 {
@@ -64,24 +88,6 @@ void main()
 		
 	if (GetKeyState(VK_F5) & 0x8000)
 	{
-		//read config file
-		std::ifstream config;
-		config.open("config.txt");
-		int screen_width, screen_height;
-		std::string line;
-
-		for (int i = 1; i <= 4; i++)
-			config >> line;
-		screen_width = stoi(line);
-			
-		for(int i = 1; i <= 3; i++)
-			config >> line;
-		screen_height = stoi(line);
-
-		for(int i = 1; i <= 3; i++)
-			config >> line;
-		weapon = line;
-
 		//keyboard input
 		INPUT ip;
 		ip.type = INPUT_KEYBOARD;
@@ -99,6 +105,7 @@ void main()
 		}
 
 		//initialize the program
+		LoadConfig();
 		SetCursorPos((screen_width / 2), (screen_height / 2));
 		mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
 		std::future<void> backgroundThread = std::async(std::launch::async,

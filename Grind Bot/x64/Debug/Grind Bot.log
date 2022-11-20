@@ -1,5 +1,4 @@
 ﻿  Grind Bot.cpp
-C:\Users\zimka\Desktop\Grind Bot\Grind Bot\Grind Bot.cpp(66,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\zimka\Desktop\Grind Bot\Grind Bot\Grind Bot.cpp(126,6): warning C4551: function call missing argument list
-C:\Users\zimka\Desktop\Grind Bot\Grind Bot\Grind Bot.cpp(142,5): warning C4551: function call missing argument list
-  Grind Bot.vcxproj -> C:\Users\zimka\Desktop\Grind Bot\x64\Debug\Grind Bot.exe
+C:\Users\zimka\Desktop\Git Hub GB\Grind Bot\Grind Bot.cpp(82,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  LINK : C:\Users\zimka\Desktop\Git Hub GB\x64\Debug\Grind Bot.exe not found or not built by the last incremental link; performing full link
+  Grind Bot.vcxproj -> C:\Users\zimka\Desktop\Git Hub GB\x64\Debug\Grind Bot.exe
