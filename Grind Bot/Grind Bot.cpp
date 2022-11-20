@@ -36,20 +36,20 @@ void bufferedFileLoader()
 		if (weapon == "Bawoo" || "bawoo")
 		{
 			std::this_thread::sleep_for(std::chrono::milliseconds(360000));
+			bgstatus = true;
+			if (bgstatus != false)
+			{
+				AmmoBoxRefresh();
+			}
 		}
-		else if (weapon == "Hawky" || "hawky")
+		if (weapon == "Hawky" || "hawky")
 		{
 			std::this_thread::sleep_for(std::chrono::milliseconds(210000));
-		}
-		else
-		{
-			std::cout << "wrong weapon or text!!!\n The program will continue but it won't use Amunition Boxes!!";
-			return;
-		}
-		bgstatus = true;
-		if (bgstatus != false)
-		{
-			AmmoBoxRefresh();
+			bgstatus = true;
+			if (bgstatus != false)
+			{
+				AmmoBoxRefresh();
+			}
 		}
 	}
 }
